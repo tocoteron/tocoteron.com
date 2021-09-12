@@ -108,11 +108,6 @@ const workExperiences: WorkExperience[] = [
         month: 9,
         day: 1,
       },
-      until: {
-        year: 2020,
-        month: 10,
-        day: 2,
-      },
     },
     roles: ["Engineer"],
     domains: ["Web backend"],
