@@ -1,0 +1,19 @@
+runtime: nodejs16
+
+instance_class: F1
+
+automatic_scaling:
+  max_instances: 1
+  min_instances: 1
+
+handlers:
+- url: /static
+  static_dir: build/static
+
+- url: /(.*\.(json|ico|png|txt))$
+  static_files: build/\1
+  upload: build/.*\.(json|ico|png|txt)$
+
+- url: .*
+  static_files: build/index.html
+  upload: build/index.html
