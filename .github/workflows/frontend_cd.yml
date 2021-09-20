@@ -38,9 +38,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: ./build
+          path: frontend/build
 
       - name: Deploy
         uses: google-github-actions/deploy-appengine@main
         with:
           credentials: ${{ secrets.GCP_SA_KEY }}
+          working_directory: frontend
