@@ -35,6 +35,7 @@ function PeriodDisplay({ period }: { period: Period }): JSX.Element {
 
 export default function WorkExperiences(props: Props): JSX.Element {
   const { workExperiences } = props;
+
   return (
     <Stack>
       {workExperiences.map((workExperience) => {
