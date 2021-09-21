@@ -28,7 +28,7 @@ const HomeTemplate: React.FC<Props> = ({
   certifications,
 }) => (
   <>
-    <HStack>
+    <HStack py={8}>
       <Avatar src={`${process.env.PUBLIC_URL}/logo192.png`} size="xl" />
       <Heading>tocoteron</Heading>
     </HStack>
