@@ -3,23 +3,6 @@ import Career from "../types/Career";
 const careers: Career[] = [
   {
     company: {
-      text: "Progmate",
-      links: ["https://biz.progmate.jp/"],
-    },
-    employmentStatus: "part-time employee",
-    period: {
-      since: {
-        year: 2020,
-        month: 12,
-        day: 20,
-      },
-    },
-    roles: ["Engineer"],
-    domains: ["Mobile", "iOS app", "Android app", "Backend"],
-    notes: [],
-  },
-  {
-    company: {
       text: "VOYAGE GROUP",
       links: ["https://voyagegroup.com/"],
     },
@@ -95,6 +78,28 @@ const careers: Career[] = [
     },
     roles: ["Engineer"],
     domains: ["Web backend", "Web frontend"],
+    notes: [],
+  },
+  {
+    company: {
+      text: "Progmate",
+      links: ["https://biz.progmate.jp/"],
+    },
+    employmentStatus: "part-time employee",
+    period: {
+      since: {
+        year: 2020,
+        month: 12,
+        day: 20,
+      },
+      until: {
+        year: 2021,
+        month: 9,
+        day: 25,
+      },
+    },
+    roles: ["Engineer"],
+    domains: ["Mobile", "iOS app", "Android app", "Backend"],
     notes: [],
   },
   {
