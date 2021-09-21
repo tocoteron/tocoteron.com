@@ -6,7 +6,7 @@ const careers: Career[] = [
       text: "VOYAGE GROUP",
       links: ["https://voyagegroup.com/"],
     },
-    employmentStatus: "internship",
+    employmentStatus: "Internship",
     period: {
       since: {
         year: 2020,
@@ -33,7 +33,7 @@ const careers: Career[] = [
       text: "Media Do",
       links: ["https://mediado.jp/"],
     },
-    employmentStatus: "internship",
+    employmentStatus: "Internship",
     period: {
       since: {
         year: 2020,
@@ -63,7 +63,7 @@ const careers: Career[] = [
         "https://www.bizreach.co.jp/",
       ],
     },
-    employmentStatus: "internship",
+    employmentStatus: "Internship",
     period: {
       since: {
         year: 2020,
@@ -85,7 +85,7 @@ const careers: Career[] = [
       text: "Progmate",
       links: ["https://biz.progmate.jp/"],
     },
-    employmentStatus: "part-time employee",
+    employmentStatus: "Part-time employee",
     period: {
       since: {
         year: 2020,
@@ -107,7 +107,7 @@ const careers: Career[] = [
       text: "JapanMonoBundle",
       links: ["https://monobundle.com/"],
     },
-    employmentStatus: "part-time employee",
+    employmentStatus: "Part-time employee",
     period: {
       since: {
         year: 2021,

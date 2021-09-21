@@ -2,9 +2,9 @@ import { TextWithLinks } from "./Text";
 import { Period } from "./Time";
 
 type EmploymentStatus =
-  | "full-time employee"
-  | "part-time employee"
-  | "internship";
+  | "Full-time employee"
+  | "Part-time employee"
+  | "Internship";
 
 export default interface Career {
   company: TextWithLinks;
