@@ -4,7 +4,7 @@ It follows [Atomic Design](https://atomicdesign.bradfrost.com/) (by Brad Frost),
 
 - Atoms
 - Molecules
-- Oranisms
+- Organisms
 - Templates
 - Pages
 
@@ -12,7 +12,7 @@ It follows [Atomic Design](https://atomicdesign.bradfrost.com/) (by Brad Frost),
 
 ## Molecules
 
-## Oranisms
+## Organisms
 
 ## Templates
 
