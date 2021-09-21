@@ -2,10 +2,15 @@ import React from "react";
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import CareerListDisplay from "../organisms/CareerListDisplay";
 import ActivitiesDisplay from "../organisms/ActivityListDisplay";
-import careers from "../../data/careers";
-import activities from "../../data/activities";
+import Career from "../../types/Career";
+import Activity from "../../types/Activity";
 
-const HomeTemplate: React.FC = () => (
+interface Props {
+  careers: Career[];
+  activities: Activity[];
+}
+
+const HomeTemplate: React.FC<Props> = ({ careers, activities }) => (
   <Tabs>
     <TabList>
       <Tab>Careers</Tab>
