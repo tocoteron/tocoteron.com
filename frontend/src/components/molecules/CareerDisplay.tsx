@@ -16,8 +16,11 @@ const CareerDisplay: React.FC<Props> = ({ career }) => (
       link={career.company.links[0]}
     />
     <Wrap>
+      <Tag variant="outline" colorScheme="green">
+        {career.employmentStatus}
+      </Tag>
       {career.roles.map((role) => (
-        <Tag key={role} variant="outline">
+        <Tag key={role} variant="outline" colorScheme="purple">
           {role}
         </Tag>
       ))}
