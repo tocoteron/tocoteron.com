@@ -7,7 +7,7 @@ interface Props {
   period: Period;
 }
 
-export default function PeriodWithIcon({ period }: Props): JSX.Element {
+const PeriodWithIcon: React.FC<Props> = ({ period }) => {
   const toStr = (date?: Date) =>
     date ? `${date.year}/${date.month}/${date.day}` : "";
 
@@ -22,4 +22,6 @@ export default function PeriodWithIcon({ period }: Props): JSX.Element {
       </Text>
     </HStack>
   );
-}
+};
+
+export default PeriodWithIcon;

@@ -7,7 +7,7 @@ interface Props {
   link?: string;
 }
 
-const TextWithLinkHeading: React.FC<Props> = ({ text, link }: Props) => {
+const TextWithLinkHeading: React.FC<Props> = ({ text, link }) => {
   if (!link) {
     return <Heading>{text}</Heading>;
   }

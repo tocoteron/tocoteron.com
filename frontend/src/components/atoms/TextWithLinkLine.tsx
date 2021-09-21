@@ -7,7 +7,7 @@ interface Props {
   link?: string;
 }
 
-const TextWithLinkLine: React.FC<Props> = ({ text, link }: Props) => {
+const TextWithLinkLine: React.FC<Props> = ({ text, link }) => {
   if (!link) {
     return <Text>{text}</Text>;
   }
