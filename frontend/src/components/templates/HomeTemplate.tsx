@@ -1,5 +1,14 @@
 import React from "react";
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import {
+  Avatar,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  HStack,
+  Heading,
+} from "@chakra-ui/react";
 import CareerListDisplay from "../organisms/CareerListDisplay";
 import ActivityListDisplay from "../organisms/ActivityListDisplay";
 import CertificationListDisplay from "../organisms/CertificationListDisplay";
@@ -18,25 +27,31 @@ const HomeTemplate: React.FC<Props> = ({
   activities,
   certifications,
 }) => (
-  <Tabs>
-    <TabList>
-      <Tab>Careers</Tab>
-      <Tab>Activities</Tab>
-      <Tab>Certifications</Tab>
-    </TabList>
+  <>
+    <HStack>
+      <Avatar src={`${process.env.PUBLIC_URL}/logo192.png`} size="xl" />
+      <Heading>tocoteron</Heading>
+    </HStack>
+    <Tabs>
+      <TabList>
+        <Tab>Careers</Tab>
+        <Tab>Activities</Tab>
+        <Tab>Certifications</Tab>
+      </TabList>
 
-    <TabPanels>
-      <TabPanel>
-        <CareerListDisplay careers={careers} />
-      </TabPanel>
-      <TabPanel>
-        <ActivityListDisplay activities={activities} />
-      </TabPanel>
-      <TabPanel>
-        <CertificationListDisplay certifications={certifications} />
-      </TabPanel>
-    </TabPanels>
-  </Tabs>
+      <TabPanels>
+        <TabPanel>
+          <CareerListDisplay careers={careers} />
+        </TabPanel>
+        <TabPanel>
+          <ActivityListDisplay activities={activities} />
+        </TabPanel>
+        <TabPanel>
+          <CertificationListDisplay certifications={certifications} />
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
+  </>
 );
 
 export default HomeTemplate;
