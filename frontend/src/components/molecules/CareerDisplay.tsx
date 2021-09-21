@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Tag, Wrap, Divider } from "@chakra-ui/react";
+import { Stack, Tag, Wrap } from "@chakra-ui/react";
 import Career from "../../types/Career";
 import PeriodWithIcon from "../atoms/PeriodWithIcon";
 import TextWithLinkHeading from "../atoms/TextLinkWithHeading";
@@ -31,7 +31,6 @@ const CareerDisplay: React.FC<Props> = ({ career }) => (
     {career.notes.map((note) => (
       <TextWithLinkLine key={note.text} text={note.text} link={note.links[0]} />
     ))}
-    <Divider />
   </Stack>
 );
 

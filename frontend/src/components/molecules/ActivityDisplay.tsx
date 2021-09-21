@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Heading, Stack, Wrap, Tag } from "@chakra-ui/react";
+import { Heading, Stack, Wrap, Tag } from "@chakra-ui/react";
 import PeriodWithIcon from "../atoms/PeriodWithIcon";
 import Activity from "../../types/Activity";
 
@@ -16,7 +16,6 @@ const ActivityDisplay: React.FC<Props> = ({ activity }) => (
         <Tag>{note}</Tag>
       ))}
     </Wrap>
-    <Divider />
   </Stack>
 );
 
