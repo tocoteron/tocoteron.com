@@ -1,7 +1,7 @@
-import { Date, Period } from "./Time";
+import { Period } from "./Time";
 
 export default interface Activity {
-  at: Date | Period;
+  period: Period;
   name: string;
   notes: string[];
 }

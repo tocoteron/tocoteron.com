@@ -2,16 +2,23 @@ import Activity from "../types/Activity";
 
 const activities: Activity[] = [
   {
-    at: {
-      year: 2016,
-      month: 8,
-      day: 10,
+    period: {
+      since: {
+        year: 2016,
+        month: 8,
+        day: 10,
+      },
+      until: {
+        year: 2016,
+        month: 8,
+        day: 10,
+      },
     },
     name: "愛媛大学工学部情報工学科プログラミングコンテスト",
     notes: ["個人", "最優秀賞", "サイボウズ賞"],
   },
   {
-    at: {
+    period: {
       since: {
         year: 2017,
         month: 2,
@@ -27,7 +34,7 @@ const activities: Activity[] = [
     notes: ["個人", "本選出場"],
   },
   {
-    at: {
+    period: {
       since: {
         year: 2017,
         month: 8,
@@ -43,25 +50,39 @@ const activities: Activity[] = [
     notes: ["個人", "参加"],
   },
   {
-    at: {
-      year: 2017,
-      month: 11,
-      day: 3,
+    period: {
+      since: {
+        year: 2017,
+        month: 11,
+        day: 3,
+      },
+      until: {
+        year: 2017,
+        month: 11,
+        day: 3,
+      },
     },
     name: "パソコン甲子園2017",
     notes: ["チーム(七代目清水天三郎丸)", "本選17位"],
   },
   {
-    at: {
-      year: 2018,
-      month: 9,
-      day: 16,
+    period: {
+      since: {
+        year: 2018,
+        month: 9,
+        day: 16,
+      },
+      until: {
+        year: 2018,
+        month: 9,
+        day: 16,
+      },
     },
     name: "ISUCON8",
     notes: ["チーム(CheapLearning)", "予選参加"],
   },
   {
-    at: {
+    period: {
       since: {
         year: 2019,
         month: 5,
@@ -77,16 +98,23 @@ const activities: Activity[] = [
     notes: ["チーム(sawayaka-sec B)", "優勝", "経済産業大臣賞"],
   },
   {
-    at: {
-      year: 2019,
-      month: 9,
-      day: 7,
+    period: {
+      since: {
+        year: 2019,
+        month: 9,
+        day: 7,
+      },
+      until: {
+        year: 2019,
+        month: 9,
+        day: 7,
+      },
     },
     name: "ISUCON9",
     notes: ["チーム(Tsurugi)", "予選参加"],
   },
   {
-    at: {
+    period: {
       since: {
         year: 2020,
         month: 5,
@@ -102,16 +130,23 @@ const activities: Activity[] = [
     notes: ["チーム(VirtualSawayaka-sec)", "58位"],
   },
   {
-    at: {
-      year: 2020,
-      month: 5,
-      day: 30,
+    period: {
+      since: {
+        year: 2020,
+        month: 5,
+        day: 30,
+      },
+      until: {
+        year: 2020,
+        month: 5,
+        day: 30,
+      },
     },
     name: "第15回情報危機管理コンテスト",
     notes: ["チーム(sawayaka-sec A)", "優勝", "経済産業大臣賞"],
   },
   {
-    at: {
+    period: {
       since: {
         year: 2020,
         month: 8,
@@ -127,16 +162,23 @@ const activities: Activity[] = [
     notes: ["チーム(ヱビス)", "グランプリ", "ニーズ賞", "UI/UX賞"],
   },
   {
-    at: {
-      year: 2020,
-      month: 9,
-      day: 12,
+    period: {
+      since: {
+        year: 2020,
+        month: 9,
+        day: 12,
+      },
+      until: {
+        year: 2020,
+        month: 9,
+        day: 12,
+      },
     },
     name: "ISUCON10",
     notes: ["チーム(WildFamily)", "予選参加"],
   },
   {
-    at: {
+    period: {
       since: {
         year: 2020,
         month: 9,
@@ -152,7 +194,7 @@ const activities: Activity[] = [
     notes: ["チーム(Oasis)", "最優秀個人賞", "アイデア賞", "技術賞"],
   },
   {
-    at: {
+    period: {
       since: {
         year: 2020,
         month: 9,
@@ -168,16 +210,23 @@ const activities: Activity[] = [
     notes: ["個人", "参加"],
   },
   {
-    at: {
-      year: 2020,
-      month: 9,
-      day: 26,
+    period: {
+      since: {
+        year: 2020,
+        month: 9,
+        day: 26,
+      },
+      until: {
+        year: 2020,
+        month: 9,
+        day: 26,
+      },
     },
     name: "技育展",
     notes: ["チーム(SlimLine)", "登壇(Webアプリ)"],
   },
   {
-    at: {
+    period: {
       since: {
         year: 2021,
         month: 5,
@@ -193,7 +242,7 @@ const activities: Activity[] = [
     notes: ["90位(OhkiLab)"],
   },
   {
-    at: {
+    period: {
       since: {
         year: 2021,
         month: 8,
