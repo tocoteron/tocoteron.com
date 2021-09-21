@@ -6,7 +6,7 @@ import ColorModeToggleButton from "./components/atoms/ColorModeToggleButton";
 
 const App: React.FC = () => (
   <ChakraProvider>
-    <Box w="100vw" h="100vh">
+    <Box minW="100vw" minH="100vh">
       <Flex as="header" w="full" px={4} py={4}>
         <Spacer />
         <ColorModeToggleButton />
