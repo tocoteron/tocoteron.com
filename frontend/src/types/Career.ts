@@ -6,7 +6,7 @@ type EmploymentStatus =
   | "part-time employee"
   | "internship";
 
-export default interface WorkExperience {
+export default interface Career {
   company: TextWithLinks;
   employmentStatus: EmploymentStatus;
   period: Period;

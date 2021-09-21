@@ -1,6 +1,6 @@
-import WorkExperience from "../types/WorkExperience";
+import Career from "../types/Career";
 
-const workExperiences: WorkExperience[] = [
+const careers: Career[] = [
   {
     company: {
       text: "Progmate",
@@ -116,4 +116,4 @@ const workExperiences: WorkExperience[] = [
   },
 ];
 
-export default workExperiences;
+export default careers;

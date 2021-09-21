@@ -1,38 +1,38 @@
 import React from "react";
 import { Stack, Tag, Wrap, Divider } from "@chakra-ui/react";
-import WorkExperience from "../../types/WorkExperience";
+import Career from "../../types/Career";
 import PeriodWithIcon from "../atoms/PeriodWithIcon";
 import TextWithLinkHeading from "../atoms/TextLinkWithHeading";
 import TextWithLinkLine from "../atoms/TextWithLinkLine";
 
 interface Props {
-  workExperience: WorkExperience;
+  career: Career;
 }
 
-const WorkExperienceDisplay: React.FC<Props> = ({ workExperience }) => (
+const CareerDisplay: React.FC<Props> = ({ career }) => (
   <Stack>
     <TextWithLinkHeading
-      text={workExperience.company.text}
-      link={workExperience.company.links[0]}
+      text={career.company.text}
+      link={career.company.links[0]}
     />
     <Wrap>
-      {workExperience.roles.map((role) => (
+      {career.roles.map((role) => (
         <Tag key={role} variant="outline">
           {role}
         </Tag>
       ))}
-      {workExperience.domains.map((domain) => (
+      {career.domains.map((domain) => (
         <Tag key={domain} variant="subtle">
           {domain}
         </Tag>
       ))}
     </Wrap>
-    <PeriodWithIcon period={workExperience.period} />
-    {workExperience.notes.map((note) => (
+    <PeriodWithIcon period={career.period} />
+    {career.notes.map((note) => (
       <TextWithLinkLine key={note.text} text={note.text} link={note.links[0]} />
     ))}
     <Divider />
   </Stack>
 );
 
-export default WorkExperienceDisplay;
+export default CareerDisplay;

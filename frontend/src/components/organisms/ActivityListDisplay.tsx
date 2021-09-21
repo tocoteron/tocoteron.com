@@ -7,7 +7,7 @@ interface Props {
   activities: Activity[];
 }
 
-const ActivitiesDisplay: React.FC<Props> = ({ activities }) => (
+const ActivityListDisplay: React.FC<Props> = ({ activities }) => (
   <Stack>
     {activities.map((activity) => (
       <ActivityDisplay activity={activity} />
@@ -15,4 +15,4 @@ const ActivitiesDisplay: React.FC<Props> = ({ activities }) => (
   </Stack>
 );
 
-export default ActivitiesDisplay;
+export default ActivityListDisplay;

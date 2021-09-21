@@ -1,8 +1,8 @@
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import React from "react";
-import workExperiences from "../../data/workExperiences";
-import WorkExperiences from "../organisms/WorkExperiencesDisplay";
-import ActivitiesDisplay from "../organisms/ActivitiesDisplay";
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import CareerListDisplay from "../organisms/CareerListDisplay";
+import ActivitiesDisplay from "../organisms/ActivityListDisplay";
+import careers from "../../data/careers";
 import activities from "../../data/activities";
 
 const HomeTemplate: React.FC = () => (
@@ -15,7 +15,7 @@ const HomeTemplate: React.FC = () => (
 
     <TabPanels>
       <TabPanel>
-        <WorkExperiences workExperiences={workExperiences} />
+        <CareerListDisplay careers={careers} />
       </TabPanel>
       <TabPanel>
         <ActivitiesDisplay activities={activities} />
