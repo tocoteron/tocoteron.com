@@ -7,6 +7,7 @@ import {
   Stack,
   Tag,
   Text,
+  Wrap,
 } from "@chakra-ui/react";
 import { CalendarIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import WorkExperience from "../../types/WorkExperience";
@@ -55,14 +56,14 @@ export default function WorkExperiences(props: Props): JSX.Element {
                 workExperience.company.text
               )}
             </Heading>
-            <HStack>
+            <Wrap>
               {workExperience.roles.map((role) => (
                 <Tag variant="outline">{role}</Tag>
               ))}
               {workExperience.domains.map((domain) => (
                 <Tag variant="subtle">{domain}</Tag>
               ))}
-            </HStack>
+            </Wrap>
             <PeriodDisplay period={workExperience.period} />
             {workExperience.notes
               ? workExperience.notes.map((note) => {
