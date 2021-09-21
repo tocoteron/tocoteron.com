@@ -13,7 +13,7 @@ const ActivityDisplay: React.FC<Props> = ({ activity }) => (
     <PeriodWithIcon period={activity.period} />
     <Wrap>
       {activity.notes.map((note) => (
-        <Tag>{note}</Tag>
+        <Tag key={note}>{note}</Tag>
       ))}
     </Wrap>
   </Stack>

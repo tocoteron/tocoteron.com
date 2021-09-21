@@ -13,7 +13,7 @@ const CertificationDisplay: React.FC<Props> = ({ certification }) => (
     <DateWithIcon date={certification.date} />
     <Wrap>
       {certification.notes.map((note) => (
-        <Tag>{note}</Tag>
+        <Tag key={note}>{note}</Tag>
       ))}
     </Wrap>
   </Stack>
