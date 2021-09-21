@@ -8,6 +8,9 @@ import {
   Tabs,
   HStack,
   Heading,
+  List,
+  ListItem,
+  Stack,
 } from "@chakra-ui/react";
 import CareerListDisplay from "../organisms/CareerListDisplay";
 import ActivityListDisplay from "../organisms/ActivityListDisplay";
@@ -30,7 +33,12 @@ const HomeTemplate: React.FC<Props> = ({
   <>
     <HStack py={8}>
       <Avatar src={`${process.env.PUBLIC_URL}/logo192.png`} size="xl" />
-      <Heading>tocoteron</Heading>
+      <Stack>
+        <Heading>tocoteron</Heading>
+        <List>
+          <ListItem>Computers make me happy.</ListItem>
+        </List>
+      </Stack>
     </HStack>
     <Tabs>
       <TabList>
