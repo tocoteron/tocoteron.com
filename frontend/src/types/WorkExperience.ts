@@ -6,14 +6,11 @@ type EmploymentStatus =
   | "part-time employee"
   | "internship";
 
-type Company = string | TextWithLinks;
-type Note = string | TextWithLinks;
-
 export default interface WorkExperience {
-  company: Company;
+  company: TextWithLinks;
   employmentStatus: EmploymentStatus;
   period: Period;
   roles: string[];
   domains: string[];
-  notes?: Note[];
+  notes: TextWithLinks[];
 }

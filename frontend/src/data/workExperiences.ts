@@ -16,6 +16,7 @@ const workExperiences: WorkExperience[] = [
     },
     roles: ["Engineer"],
     domains: ["Mobile", "iOS app", "Android app", "Backend"],
+    notes: [],
   },
   {
     company: {

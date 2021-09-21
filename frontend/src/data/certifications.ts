@@ -8,6 +8,7 @@ const certifications: Certificaiton[] = [
       day: 16,
     },
     name: "基本情報技術者",
+    notes: [],
   },
   {
     date: {
@@ -16,6 +17,7 @@ const certifications: Certificaiton[] = [
       day: 8,
     },
     name: "情報技術者検定1級",
+    notes: [],
   },
   {
     date: {
@@ -24,6 +26,7 @@ const certifications: Certificaiton[] = [
       day: 20,
     },
     name: "応用情報技術者",
+    notes: [],
   },
   {
     date: {
@@ -32,7 +35,7 @@ const certifications: Certificaiton[] = [
       day: 5,
     },
     name: "AtCoder PAST中級",
-    note: "76点",
+    notes: ["76点"],
   },
 ];
 
