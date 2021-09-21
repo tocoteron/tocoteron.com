@@ -1,7 +1,7 @@
 import React from "react";
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import CareerListDisplay from "../organisms/CareerListDisplay";
-import ActivitiesDisplay from "../organisms/ActivityListDisplay";
+import ActivityListDisplay from "../organisms/ActivityListDisplay";
 import CertificationListDisplay from "../organisms/CertificationListDisplay";
 import Career from "../../types/Career";
 import Activity from "../../types/Activity";
@@ -30,7 +30,7 @@ const HomeTemplate: React.FC<Props> = ({
         <CareerListDisplay careers={careers} />
       </TabPanel>
       <TabPanel>
-        <ActivitiesDisplay activities={activities} />
+        <ActivityListDisplay activities={activities} />
       </TabPanel>
       <TabPanel>
         <CertificationListDisplay certifications={certifications} />
