@@ -11,6 +11,8 @@ import {
   List,
   ListItem,
   Stack,
+  Wrap,
+  Button,
 } from "@chakra-ui/react";
 import CareerListDisplay from "../organisms/CareerListDisplay";
 import ActivityListDisplay from "../organisms/ActivityListDisplay";
@@ -31,15 +33,35 @@ const HomeTemplate: React.FC<Props> = ({
   certifications,
 }) => (
   <>
-    <HStack py={8}>
-      <Avatar src={`${process.env.PUBLIC_URL}/logo192.png`} size="xl" />
-      <Stack>
-        <Heading>tocoteron</Heading>
-        <List>
-          <ListItem>Computers make me happy.</ListItem>
-        </List>
-      </Stack>
-    </HStack>
+    <Stack py={8}>
+      <HStack>
+        <Avatar src={`${process.env.PUBLIC_URL}/logo192.png`} size="xl" />
+        <Stack>
+          <Heading>tocoteron</Heading>
+          <List>
+            <ListItem>Computers make me happy.</ListItem>
+          </List>
+        </Stack>
+      </HStack>
+      <Wrap>
+        <Button
+          as="a"
+          href="https://github.com/tocoteron"
+          target="_blank"
+          variant="outline"
+        >
+          GitHub
+        </Button>
+        <Button
+          as="a"
+          href="https://twitter.com/tocoteron"
+          target="_blank"
+          variant="outline"
+        >
+          Twitter
+        </Button>
+      </Wrap>
+    </Stack>
     <Tabs>
       <TabList>
         <Tab>Careers</Tab>
