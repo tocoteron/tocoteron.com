@@ -41,7 +41,7 @@ const HomeTemplate: React.FC<Props> = ({
         <Tab>Profile</Tab>
         <Tab>Careers</Tab>
         <Tab>Activities</Tab>
-        <Tab>Certifications</Tab>
+        <Tab>Certs</Tab>
       </TabList>
 
       <TabPanels>
