@@ -1,67 +1,40 @@
 import React from "react";
-import {
-  Avatar,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-  HStack,
-  Heading,
-  List,
-  ListItem,
-  Stack,
-  Wrap,
-  Button,
-} from "@chakra-ui/react";
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import IdentityDisplay from "../organisms/IdentityDisplay";
 import CareerListDisplay from "../organisms/CareerListDisplay";
 import ActivityListDisplay from "../organisms/ActivityListDisplay";
 import CertificationListDisplay from "../organisms/CertificationListDisplay";
+import Account from "../../types/Account";
 import Career from "../../types/Career";
 import Activity from "../../types/Activity";
 import Certificaiton from "../../types/Certification";
 
 interface Props {
+  iconLink: string;
+  name: string;
+  phrase: string;
+  accounts: Account[];
   careers: Career[];
   activities: Activity[];
   certifications: Certificaiton[];
 }
 
 const HomeTemplate: React.FC<Props> = ({
+  iconLink,
+  name,
+  phrase,
+  accounts,
   careers,
   activities,
   certifications,
 }) => (
   <>
-    <Stack py={8}>
-      <HStack>
-        <Avatar src={`${process.env.PUBLIC_URL}/logo192.png`} size="xl" />
-        <Stack>
-          <Heading>tocoteron</Heading>
-          <List>
-            <ListItem>Computers make me happy.</ListItem>
-          </List>
-        </Stack>
-      </HStack>
-      <Wrap>
-        <Button
-          as="a"
-          href="https://github.com/tocoteron"
-          target="_blank"
-          variant="outline"
-        >
-          GitHub
-        </Button>
-        <Button
-          as="a"
-          href="https://twitter.com/tocoteron"
-          target="_blank"
-          variant="outline"
-        >
-          Twitter
-        </Button>
-      </Wrap>
-    </Stack>
+    <IdentityDisplay
+      iconLink={iconLink}
+      name={name}
+      phrase={phrase}
+      accounts={accounts}
+    />
     <Tabs>
       <TabList>
         <Tab>Careers</Tab>
