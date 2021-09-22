@@ -21,7 +21,7 @@ const IdentityDisplay: React.FC<Props> = ({
     <IdentityCard iconLink={iconLink} name={name} phrase={phrase} />
     <Wrap>
       {accounts.map((account) => (
-        <AccountLink account={account} />
+        <AccountLink key={account.name} account={account} />
       ))}
     </Wrap>
   </Stack>
