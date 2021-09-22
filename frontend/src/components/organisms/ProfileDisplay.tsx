@@ -23,7 +23,7 @@ const ProfileDisplay: React.FC = () => (
     <Stack>
       <Heading>What do I like to</Heading>
       <Text>I like to:</Text>
-      <UnorderedList>
+      <UnorderedList stylePosition="inside">
         <ListItem>
           Code (Visit &nbsp;
           <TextWithLinkLine
@@ -42,7 +42,7 @@ const ProfileDisplay: React.FC = () => (
       <Heading>Technical domains</Heading>
       <Stack>
         <Text>I devlelop:</Text>
-        <UnorderedList>
+        <UnorderedList stylePosition="inside">
           <ListItem>Web backend</ListItem>
           <ListItem>Web frontend</ListItem>
           <ListItem>iOS apps</ListItem>
@@ -50,7 +50,7 @@ const ProfileDisplay: React.FC = () => (
       </Stack>
       <Stack>
         <Text>I am learning:</Text>
-        <UnorderedList>
+        <UnorderedList stylePosition="inside">
           <ListItem>Google Cloud Platform</ListItem>
           <ListItem>Cryptocurrency / Blockchain</ListItem>
           <ListItem>GraphQL</ListItem>
