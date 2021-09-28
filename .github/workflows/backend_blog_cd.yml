@@ -31,4 +31,5 @@ jobs:
           name: blog
           runtime: go116
           entry_point: Blog
+          region: asia-northeast1
           source_dir: backend/blog
