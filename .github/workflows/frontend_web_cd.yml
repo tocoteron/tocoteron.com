@@ -44,5 +44,5 @@ jobs:
       - name: Deploy
         uses: google-github-actions/deploy-appengine@main
         with:
-          credentials: ${{ secrets.GCP_SA_KEY }}
+          credentials: ${{ secrets.GCP_SA_KEY_APP_ENGINE }}
           working_directory: frontend/web
