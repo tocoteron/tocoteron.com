@@ -1,3 +1,4 @@
+// For Cloud Functions
 package function
 
 import (
