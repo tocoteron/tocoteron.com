@@ -46,11 +46,21 @@ paths:
         format: int64
       responses:
         '200':
-          description: All posts
+          description: A post
           schema:
             type: object
             $ref: '#/definitions/BlogPost'
+        '400':
+          description: Invalid request
+          schema:
+            type: object
+            $ref: '#/definitions/APIError'
 definitions:
+  APIError:
+    type: object
+    properties:
+      message:
+        type: string
   BlogPost:
     type: object
     properties:
