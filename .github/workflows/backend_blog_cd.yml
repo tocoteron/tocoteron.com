@@ -1,0 +1,33 @@
+name: Backend Blog CD
+
+on:
+  push:
+    paths:
+      - backend/blog/**
+
+jobs:
+  ci:
+    name: CD
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend/blog
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.16
+
+      - name: Test
+        run: go test
+
+      - name: Deploy
+        uses: google-github-actions/deploy-cloud-functions@main
+        with:
+          credentials: ${{ secrets.GCP_SA_KEY_CLOUD_FUNCTIONS }}
+          name: blog
+          runtime: go116
+          entrypoint: Blog
+          source_dir: backend/blog
