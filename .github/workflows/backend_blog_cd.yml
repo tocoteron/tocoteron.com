@@ -1,6 +1,7 @@
 name: Backend Blog CD
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - backend/blog/**
