@@ -29,5 +29,5 @@ jobs:
           credentials: ${{ secrets.GCP_SA_KEY_CLOUD_FUNCTIONS }}
           name: blog
           runtime: go116
-          entrypoint: Blog
+          entry_point: Blog
           source_dir: backend/blog
