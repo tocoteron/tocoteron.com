@@ -1,9 +1,9 @@
-name: Frontend CI
+name: Frontend Web CI
 
 on:
   push:
     paths:
-      - frontend/**
+      - frontend/web/**
 
 jobs:
   ci:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: frontend
+        working-directory: frontend/web
     steps:
       - uses: actions/checkout@v2
 
