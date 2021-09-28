@@ -11,4 +11,6 @@ func init() {
 	EchoServer = echo.New()
 
 	EchoServer.GET("/", handler.HelloHandler)
+	EchoServer.GET("/posts", handler.GetPostsHandler)
+	EchoServer.GET("/posts/:id", handler.GetPostHandler)
 }
