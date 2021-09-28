@@ -1,4 +1,3 @@
-// For Cloud Functions
 package function
 
 import (
@@ -7,6 +6,7 @@ import (
 	"tocoteron.com/blog/shared"
 )
 
+// For Cloud Functions
 func Blog(w http.ResponseWriter, r *http.Request) {
 	shared.EchoServer.ServeHTTP(w, r)
 }
