@@ -3,7 +3,7 @@ name: Backend Blog CI
 on:
   push:
     paths:
-      - frontend/backend/blog/**
+      - backend/blog/**
 
 jobs:
   ci:
