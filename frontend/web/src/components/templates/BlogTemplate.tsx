@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Container, Divider, Heading, Stack } from "@chakra-ui/react";
-import BlogPostCard from "../molecules/BlogPostCard";
+import { Container, Heading } from "@chakra-ui/react";
+import BlogPostListDisplay from "../organisms/BlogPostListDisplay";
 import BlogPost from "../../types/BlogPost";
 
 interface Props {
@@ -11,14 +11,7 @@ interface Props {
 const BlogTemplate: React.FC<Props> = ({ title, posts }) => (
   <Container>
     <Heading mb={8}>{title}</Heading>
-    {posts.map((post) => (
-      <Stack key={post.id}>
-        <Box py={4}>
-          <BlogPostCard post={post} />
-        </Box>
-        <Divider />
-      </Stack>
-    ))}
+    <BlogPostListDisplay posts={posts} />
   </Container>
 );
 
