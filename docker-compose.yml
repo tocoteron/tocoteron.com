@@ -8,3 +8,12 @@ services:
       - "8080:8080"
     volumes:
       - ./backend/blog:/app
+  web-frontend:
+    build: frontend/web
+    environment:
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/web:/app
+      - /app/node_modules
