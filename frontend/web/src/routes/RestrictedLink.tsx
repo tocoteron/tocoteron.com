@@ -8,8 +8,8 @@ interface Props extends React.ComponentProps<typeof Link> {
 }
 
 // Use this component to define route instead of react-router-dom's Link component
-// eslint-disable-next-line react/jsx-props-no-spreading
 const RestrictedLink: React.FC<Props> = (props) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
   <Link as={ReactRouterLink} {...props} />
 );
 
