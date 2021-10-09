@@ -7,7 +7,7 @@ interface Props {
   certification: Certification;
 }
 
-const CertificationDisplay: React.FC<Props> = ({ certification }) => (
+const CertificationCard: React.FC<Props> = ({ certification }) => (
   <Stack>
     <Heading size="sm">{certification.name}</Heading>
     <DateWithIcon date={certification.date} />
@@ -21,4 +21,4 @@ const CertificationDisplay: React.FC<Props> = ({ certification }) => (
   </Stack>
 );
 
-export default CertificationDisplay;
+export default CertificationCard;

@@ -9,9 +9,9 @@ import {
 } from "@chakra-ui/react";
 import IdentityDisplay from "../organisms/IdentityDisplay";
 import ProfileDisplay from "../organisms/ProfileDisplay";
-import CareerListDisplay from "../organisms/CareerListDisplay";
-import ActivityListDisplay from "../organisms/ActivityListDisplay";
-import CertificationListDisplay from "../organisms/CertificationListDisplay";
+import CareerCardList from "../organisms/CareerCardList";
+import ActivityCardList from "../organisms/ActivityCardList";
+import CertificationCardList from "../organisms/CertificationCardList";
 import Account from "../../types/Account";
 import Career from "../../types/Career";
 import Activity from "../../types/Activity";
@@ -56,13 +56,13 @@ const HomeTemplate: React.FC<Props> = ({
           <ProfileDisplay />
         </TabPanel>
         <TabPanel>
-          <CareerListDisplay careers={careers} />
+          <CareerCardList careers={careers} />
         </TabPanel>
         <TabPanel>
-          <ActivityListDisplay activities={activities} />
+          <ActivityCardList activities={activities} />
         </TabPanel>
         <TabPanel>
-          <CertificationListDisplay certifications={certifications} />
+          <CertificationCardList certifications={certifications} />
         </TabPanel>
       </TabPanels>
     </Tabs>

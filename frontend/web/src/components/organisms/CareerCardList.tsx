@@ -1,18 +1,18 @@
 import React from "react";
 import { Box, Divider, Stack } from "@chakra-ui/react";
 import Career from "../../types/Career";
-import CareerDisplay from "../molecules/CareerDisplay";
+import CareerCard from "../molecules/CareerCard";
 
 interface Props {
   careers: Career[];
 }
 
-const CareerListDisplay: React.FC<Props> = ({ careers }) => (
+const CareerCardList: React.FC<Props> = ({ careers }) => (
   <Stack>
     {careers.map((career) => (
       <Stack key={career.company.text}>
         <Box py={4}>
-          <CareerDisplay career={career} />
+          <CareerCard career={career} />
         </Box>
         <Divider />
       </Stack>
@@ -20,4 +20,4 @@ const CareerListDisplay: React.FC<Props> = ({ careers }) => (
   </Stack>
 );
 
-export default CareerListDisplay;
+export default CareerCardList;

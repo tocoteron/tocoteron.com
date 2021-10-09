@@ -7,7 +7,7 @@ interface Props {
   posts: BlogPost[];
 }
 
-const BlogPostListDisplay: React.FC<Props> = ({ posts }) => (
+const BlogPostCardList: React.FC<Props> = ({ posts }) => (
   <Stack>
     {posts.map((post) => (
       <Stack key={post.id}>
@@ -20,4 +20,4 @@ const BlogPostListDisplay: React.FC<Props> = ({ posts }) => (
   </Stack>
 );
 
-export default BlogPostListDisplay;
+export default BlogPostCardList;

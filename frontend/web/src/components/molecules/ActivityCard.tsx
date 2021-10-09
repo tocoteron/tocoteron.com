@@ -7,7 +7,7 @@ interface Props {
   activity: Activity;
 }
 
-const ActivityDisplay: React.FC<Props> = ({ activity }) => (
+const ActivityCard: React.FC<Props> = ({ activity }) => (
   <Stack>
     <Heading size="sm">{activity.name}</Heading>
     <PeriodWithIcon period={activity.period} />
@@ -21,4 +21,4 @@ const ActivityDisplay: React.FC<Props> = ({ activity }) => (
   </Stack>
 );
 
-export default ActivityDisplay;
+export default ActivityCard;

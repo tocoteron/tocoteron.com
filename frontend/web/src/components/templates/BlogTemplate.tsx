@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Heading } from "@chakra-ui/react";
-import BlogPostListDisplay from "../organisms/BlogPostListDisplay";
+import BlogPostCardList from "../organisms/BlogPostCardList";
 import BlogPost from "../../types/BlogPost";
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 const BlogTemplate: React.FC<Props> = ({ title, posts }) => (
   <Container>
     <Heading mb={8}>{title}</Heading>
-    <BlogPostListDisplay posts={posts} />
+    <BlogPostCardList posts={posts} />
   </Container>
 );
 

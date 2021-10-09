@@ -9,7 +9,7 @@ interface Props {
   career: Career;
 }
 
-const CareerDisplay: React.FC<Props> = ({ career }) => (
+const CareerCard: React.FC<Props> = ({ career }) => (
   <Stack>
     <TextWithLinkHeading
       text={career.company.text}
@@ -41,4 +41,4 @@ const CareerDisplay: React.FC<Props> = ({ career }) => (
   </Stack>
 );
 
-export default CareerDisplay;
+export default CareerCard;
