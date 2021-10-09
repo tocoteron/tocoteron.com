@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  blog-backend-api:
+    build: backend/blog
+    environment:
+      - PORT=8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend/blog:/app
