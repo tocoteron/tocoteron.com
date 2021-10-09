@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Stack } from "@chakra-ui/react";
+import { Box, Divider, Stack } from "@chakra-ui/react";
 import Career from "../../types/Career";
 import CareerDisplay from "../molecules/CareerDisplay";
 
@@ -11,7 +11,9 @@ const CareerListDisplay: React.FC<Props> = ({ careers }) => (
   <Stack>
     {careers.map((career) => (
       <Stack key={career.company.text}>
-        <CareerDisplay career={career} />
+        <Box py={4}>
+          <CareerDisplay career={career} />
+        </Box>
         <Divider />
       </Stack>
     ))}

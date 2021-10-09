@@ -12,7 +12,7 @@ const BlogTemplate: React.FC<Props> = ({ title, posts }) => (
   <Container>
     <Heading mb={8}>{title}</Heading>
     {posts.map((post) => (
-      <Stack>
+      <Stack key={post.id}>
         <Box py={4}>
           <BlogPostCard post={post} />
         </Box>

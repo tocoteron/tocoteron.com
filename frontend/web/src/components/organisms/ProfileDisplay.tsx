@@ -7,12 +7,18 @@ import {
   Text,
   UnorderedList,
   Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import TextWithLinkLine from "../atoms/TextWithLinkLine";
+import {
+  infrastructures,
+  naturalLanguages,
+  programmingLanguages,
+} from "../../data/skills";
 
 const ProfileDisplay: React.FC = () => (
-  <Stack>
+  <Stack spacing={8}>
     <Stack>
       <Heading>Hi</Heading>
       <Text>
@@ -57,38 +63,47 @@ const ProfileDisplay: React.FC = () => (
         </UnorderedList>
       </Stack>
     </Stack>
-    <Stack>
-      <Heading>Languages</Heading>
-      <Wrap>
-        <Tag>
-          <StarIcon />
-          Japanese
-        </Tag>
-        <Tag>English</Tag>
-      </Wrap>
-      <Wrap>
-        <Tag>
-          <StarIcon />C
-        </Tag>
-        <Tag>C++</Tag>
-        <Tag>C#</Tag>
-        <Tag>Java</Tag>
-        <Tag>
-          <StarIcon />
-          Go
-        </Tag>
-        <Tag>Rust</Tag>
-        <Tag>Swift</Tag>
-        <Tag>JavaScript</Tag>
-        <Tag>
-          <StarIcon />
-          TypeScript
-        </Tag>
-        <Tag>Python 3</Tag>
-        <Tag>Scala 3</Tag>
-        <Tag>HTML</Tag>
-        <Tag>CSS</Tag>
-      </Wrap>
+    <Stack spacing={4}>
+      <Stack>
+        <Heading>Skills</Heading>
+        <Heading size="md">Natural languages</Heading>
+        <Wrap>
+          {naturalLanguages.map((language) => (
+            <WrapItem key={language.name}>
+              <Tag>
+                {language.isGoodAt && <StarIcon />}
+                {language.name}
+              </Tag>
+            </WrapItem>
+          ))}
+        </Wrap>
+      </Stack>
+      <Stack>
+        <Heading size="md">Programming languages</Heading>
+        <Wrap>
+          {programmingLanguages.map((language) => (
+            <WrapItem key={language.name}>
+              <Tag>
+                {language.isGoodAt && <StarIcon />}
+                {language.name}
+              </Tag>
+            </WrapItem>
+          ))}
+        </Wrap>
+      </Stack>
+      <Stack>
+        <Heading size="md">Infrastructures</Heading>
+        <Wrap>
+          {infrastructures.map((infrastructure) => (
+            <WrapItem key={infrastructure.name}>
+              <Tag>
+                {infrastructure.isGoodAt && <StarIcon />}
+                {infrastructure.name}
+              </Tag>
+            </WrapItem>
+          ))}
+        </Wrap>
+      </Stack>
     </Stack>
   </Stack>
 );

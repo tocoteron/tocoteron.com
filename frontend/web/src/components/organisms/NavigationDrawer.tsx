@@ -46,7 +46,7 @@ const NavigationDrawer: React.FC<Props> = ({ navigations }) => {
 
           <DrawerBody>
             {navigations.map((navigation) => (
-              <RestrictedLink to={navigation.path}>
+              <RestrictedLink key={navigation.path} to={navigation.path}>
                 <Heading>{navigation.summary}</Heading>
               </RestrictedLink>
             ))}

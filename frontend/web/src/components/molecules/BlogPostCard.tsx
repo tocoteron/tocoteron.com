@@ -20,21 +20,25 @@ const BlogPostCard: React.FC<Props> = ({ post }) => (
     <Heading>{post.title}</Heading>
     <Wrap>
       {post.tags.map((tag) => (
-        <WrapItem>
+        <WrapItem key={tag}>
           <Tag>{tag}</Tag>
         </WrapItem>
       ))}
     </Wrap>
     <Wrap>
-      <HStack>
-        <DateWithIcon date={post.createdAt} />
-      </HStack>
-      <HStack>
-        <Text>(</Text>
-        <Text>Updated at</Text>
-        <DateWithIcon date={post.updatedAt} />
-        <Text>)</Text>
-      </HStack>
+      <WrapItem>
+        <HStack>
+          <DateWithIcon date={post.createdAt} />
+        </HStack>
+      </WrapItem>
+      <WrapItem>
+        <HStack>
+          <Text>(</Text>
+          <Text>Updated at</Text>
+          <DateWithIcon date={post.updatedAt} />
+          <Text>)</Text>
+        </HStack>
+      </WrapItem>
     </Wrap>
   </Stack>
 );

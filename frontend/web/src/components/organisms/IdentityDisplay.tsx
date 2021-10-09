@@ -1,4 +1,4 @@
-import { Stack, Wrap } from "@chakra-ui/react";
+import { Stack, Wrap, WrapItem } from "@chakra-ui/react";
 import React from "react";
 import Account from "../../types/Account";
 import IdentityCard from "../molecules/IdentityCard";
@@ -21,7 +21,9 @@ const IdentityDisplay: React.FC<Props> = ({
     <IdentityCard iconLink={iconLink} name={name} phrase={phrase} />
     <Wrap>
       {accounts.map((account) => (
-        <AccountLink key={account.name} account={account} />
+        <WrapItem key={account.name}>
+          <AccountLink account={account} />
+        </WrapItem>
       ))}
     </Wrap>
   </Stack>

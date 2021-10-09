@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Stack, Wrap, Tag } from "@chakra-ui/react";
+import { Heading, Stack, Wrap, Tag, WrapItem } from "@chakra-ui/react";
 import PeriodWithIcon from "../atoms/PeriodWithIcon";
 import Activity from "../../types/Activity";
 
@@ -13,7 +13,9 @@ const ActivityDisplay: React.FC<Props> = ({ activity }) => (
     <PeriodWithIcon period={activity.period} />
     <Wrap>
       {activity.notes.map((note) => (
-        <Tag key={note}>{note}</Tag>
+        <WrapItem key={note}>
+          <Tag>{note}</Tag>
+        </WrapItem>
       ))}
     </Wrap>
   </Stack>

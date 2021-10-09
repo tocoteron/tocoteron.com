@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Tag, Wrap } from "@chakra-ui/react";
+import { Stack, Tag, Wrap, WrapItem } from "@chakra-ui/react";
 import Career from "../../types/Career";
 import PeriodWithIcon from "../atoms/PeriodWithIcon";
 import TextWithLinkHeading from "../atoms/TextLinkWithHeading";
@@ -16,18 +16,22 @@ const CareerDisplay: React.FC<Props> = ({ career }) => (
       link={career.company.links[0]}
     />
     <Wrap>
-      <Tag variant="outline" colorScheme="green">
-        {career.employmentStatus}
-      </Tag>
-      {career.roles.map((role) => (
-        <Tag key={role} variant="outline" colorScheme="purple">
-          {role}
+      <WrapItem>
+        <Tag variant="outline" colorScheme="green">
+          {career.employmentStatus}
         </Tag>
+      </WrapItem>
+      {career.roles.map((role) => (
+        <WrapItem key={role}>
+          <Tag variant="outline" colorScheme="purple">
+            {role}
+          </Tag>
+        </WrapItem>
       ))}
       {career.domains.map((domain) => (
-        <Tag key={domain} variant="subtle">
-          {domain}
-        </Tag>
+        <WrapItem key={domain}>
+          <Tag variant="subtle">{domain}</Tag>
+        </WrapItem>
       ))}
     </Wrap>
     <PeriodWithIcon period={career.period} />

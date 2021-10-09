@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Stack } from "@chakra-ui/react";
+import { Box, Divider, Stack } from "@chakra-ui/react";
 import Certification from "../../types/Certification";
 import CertificationDisplay from "../molecules/CertificationDisplay";
 
@@ -11,7 +11,9 @@ const CertificationListDisplay: React.FC<Props> = ({ certifications }) => (
   <Stack>
     {certifications.map((certification) => (
       <Stack key={certification.name}>
-        <CertificationDisplay certification={certification} />
+        <Box py={4}>
+          <CertificationDisplay certification={certification} />
+        </Box>
         <Divider />
       </Stack>
     ))}

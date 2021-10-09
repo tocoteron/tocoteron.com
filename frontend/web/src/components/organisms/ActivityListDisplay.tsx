@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Stack } from "@chakra-ui/react";
+import { Box, Divider, Stack } from "@chakra-ui/react";
 import Activity from "../../types/Activity";
 import ActivityDisplay from "../molecules/ActivityDisplay";
 
@@ -11,7 +11,9 @@ const ActivityListDisplay: React.FC<Props> = ({ activities }) => (
   <Stack>
     {activities.map((activity) => (
       <Stack key={activity.name}>
-        <ActivityDisplay activity={activity} />
+        <Box py={4}>
+          <ActivityDisplay activity={activity} />
+        </Box>
         <Divider />
       </Stack>
     ))}

@@ -1,5 +1,12 @@
 import React from "react";
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import {
+  Container,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+} from "@chakra-ui/react";
 import IdentityDisplay from "../organisms/IdentityDisplay";
 import ProfileDisplay from "../organisms/ProfileDisplay";
 import CareerListDisplay from "../organisms/CareerListDisplay";
@@ -29,7 +36,7 @@ const HomeTemplate: React.FC<Props> = ({
   activities,
   certifications,
 }) => (
-  <>
+  <Container>
     <IdentityDisplay
       iconLink={iconLink}
       name={name}
@@ -59,7 +66,7 @@ const HomeTemplate: React.FC<Props> = ({
         </TabPanel>
       </TabPanels>
     </Tabs>
-  </>
+  </Container>
 );
 
 export default HomeTemplate;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Stack, Tag, Wrap } from "@chakra-ui/react";
+import { Heading, Stack, Tag, Wrap, WrapItem } from "@chakra-ui/react";
 import Certification from "../../types/Certification";
 import DateWithIcon from "../atoms/DateWithIcon";
 
@@ -13,7 +13,9 @@ const CertificationDisplay: React.FC<Props> = ({ certification }) => (
     <DateWithIcon date={certification.date} />
     <Wrap>
       {certification.notes.map((note) => (
-        <Tag key={note}>{note}</Tag>
+        <WrapItem key={note}>
+          <Tag>{note}</Tag>
+        </WrapItem>
       ))}
     </Wrap>
   </Stack>
