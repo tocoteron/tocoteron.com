@@ -1,13 +1,14 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Switch } from "react-router-dom";
+import RestrictedRoute from "./RestrictedRoute";
 import HomePage from '../components/pages/HomePage';
 
-const routes: React.FC = () => (
+const Routes: React.FC = () => (
   <Switch>
-    <Route exact path="/">
+    <RestrictedRoute exact path="/">
       <HomePage />
-    </Route>
+    </RestrictedRoute>
   </Switch>
 );
 
-export default routes;
+export default Routes;
