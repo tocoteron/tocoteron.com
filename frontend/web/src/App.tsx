@@ -1,8 +1,9 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import { Box, ChakraProvider, Flex, Spacer } from "@chakra-ui/react";
-import "./App.css";
-import HomePage from "./components/pages/HomePage";
+import Routes from "./routes/Routes";
 import ColorModeToggleButton from "./components/atoms/ColorModeToggleButton";
+import "./App.css";
 
 const App: React.FC = () => (
   <ChakraProvider>
@@ -11,7 +12,9 @@ const App: React.FC = () => (
         <Spacer />
         <ColorModeToggleButton />
       </Flex>
-      <HomePage />
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     </Box>
   </ChakraProvider>
 );
