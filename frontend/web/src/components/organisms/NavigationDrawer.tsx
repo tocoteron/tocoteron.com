@@ -10,7 +10,7 @@ import {
   useDisclosure,
   IconButton,
   Heading,
-} from "@chakra-ui/react"
+} from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { RoutePathWithDescription } from "../../routes";
 import RestrictedLink from "../../routes/RestrictedLink";
@@ -20,8 +20,8 @@ interface Props {
 }
 
 const NavigationDrawer: React.FC<Props> = ({ navigations }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = useRef<HTMLButtonElement>(null)
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef<HTMLButtonElement>(null);
 
   return (
     <>
@@ -45,22 +45,18 @@ const NavigationDrawer: React.FC<Props> = ({ navigations }) => {
           <DrawerHeader>You gonna go:</DrawerHeader>
 
           <DrawerBody>
-            {
-              navigations.map(navigation =>
-                <RestrictedLink to={navigation.path}>
-                  <Heading>
-                    {navigation.summary}
-                  </Heading>
-                </RestrictedLink>
-              )
-            }
+            {navigations.map((navigation) => (
+              <RestrictedLink to={navigation.path}>
+                <Heading>{navigation.summary}</Heading>
+              </RestrictedLink>
+            ))}
           </DrawerBody>
 
           <DrawerFooter />
         </DrawerContent>
       </Drawer>
     </>
-  )
-}
+  );
+};
 
 export default NavigationDrawer;

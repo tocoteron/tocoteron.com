@@ -1,8 +1,8 @@
-import React from "react"
-import { Flex, HStack, Spacer } from "@chakra-ui/react"
-import NavigationDrawer from "../organisms/NavigationDrawer"
+import React from "react";
+import { Flex, HStack, Spacer } from "@chakra-ui/react";
+import NavigationDrawer from "../organisms/NavigationDrawer";
 import ColorModeToggleButton from "../atoms/ColorModeToggleButton";
-import { navigations } from "../../routes"
+import { navigations } from "../../routes";
 
 const Header: React.FC = () => (
   <Flex as="header" w="full" px={4} py={4}>
@@ -12,6 +12,6 @@ const Header: React.FC = () => (
     </HStack>
     <Spacer />
   </Flex>
-)
+);
 
-export default Header
+export default Header;

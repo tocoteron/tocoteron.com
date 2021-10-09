@@ -8,6 +8,6 @@ interface Props extends React.ComponentProps<typeof Route> {
 
 // Use this component to define route instead of react-router-dom's Route component
 // eslint-disable-next-line react/jsx-props-no-spreading
-const RestrictedRoute: React.FC<Props> = props => <Route {...props} />;
+const RestrictedRoute: React.FC<Props> = (props) => <Route {...props} />;
 
-export default RestrictedRoute
+export default RestrictedRoute;
