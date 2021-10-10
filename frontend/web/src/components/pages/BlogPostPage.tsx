@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Container, Divider, Spinner, Stack, Text } from "@chakra-ui/react";
+import LoadingDisplay from "../organisms/LoadingDisplay";
+import BlogPostTemplate from "../templates/BlogPostTemplate";
 import BlogPost from "../../types/BlogPost";
 import blogPosts from "../../data/blogPosts";
-import BlogPostCard from "../molecules/BlogPostCard";
 
 interface PathParams {
   postId: string;
@@ -21,19 +21,7 @@ const BlogPostPage: React.FC = () => {
     }
   }, [postId]);
 
-  return (
-    <Container>
-      {post ? (
-        <Stack>
-          <BlogPostCard post={post} />
-          <Divider />
-          <Text>{post.content}</Text>
-        </Stack>
-      ) : (
-        <Spinner />
-      )}
-    </Container>
-  );
+  return post ? <BlogPostTemplate post={post} /> : <LoadingDisplay />;
 };
 
 export default BlogPostPage;
