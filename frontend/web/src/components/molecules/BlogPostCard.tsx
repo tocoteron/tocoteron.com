@@ -1,7 +1,9 @@
 import React from "react";
+import { Link as ReactRouterLink } from "react-router-dom";
 import {
   Heading,
   HStack,
+  Link,
   Stack,
   Tag,
   Text,
@@ -17,7 +19,9 @@ interface Props {
 
 const BlogPostCard: React.FC<Props> = ({ post }) => (
   <Stack>
-    <Heading>{post.title}</Heading>
+    <Link as={ReactRouterLink} to={`/blog/${post.id}`}>
+      <Heading>{post.title}</Heading>
+    </Link>
     <Wrap>
       {post.tags.map((tag) => (
         <WrapItem key={tag}>

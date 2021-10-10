@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-cycle
 export { default } from "./Routes";
 
-export type RoutePath = "/" | "/blog";
+export type RoutePath = "/" | "/blog" | "/blog/:postId";
 
 export interface RoutePathWithDescription {
   path: RoutePath;
